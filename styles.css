@@ -2,6 +2,18 @@
   --blue: #4087d5;
 }
 
+@font-face {
+  font-family: 'roboto';
+  src: url('fonts/roboto-variablefont_wdthwght-webfont.woff2') format('woff2'),
+       url('fonts/roboto-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'roboto', system-ui, sans-serif;
+}
+
 body {
   min-height: 100vh;
   /*^This should be removed later^*/
@@ -35,12 +47,13 @@ body {
 h1 {
   color: white;
   display: inline;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
 .logo > svg {
   fill: white;
-  height: 2.2rem;
+  height: 3rem;
 }
 
 .site-links {
@@ -51,12 +64,11 @@ h1 {
 
 .site-links svg {
   fill: white;
-  height: 1.2rem;
+  height: 1rem;
 }
 
 .site-links a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
   font-size: 1.2rem;
 }
