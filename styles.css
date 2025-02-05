@@ -22,4 +22,41 @@ body {
 .dashboard {
   background-color: lightgrey;
   grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+  background-color: yellow;
+  /*^This should be removed later^*/
+  grid-row: 1 / span 2;
+}
+
+h1 {
+  color: white;
+  display: inline;
+  font-size: 1.8rem;
+}
+
+.logo > svg {
+  fill: white;
+  height: 2.2rem;
+}
+
+.site-links {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-left: 10%;
+}
+
+.site-links svg {
+  fill: white;
+  height: 1.2rem;
+}
+
+.site-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
