@@ -19,7 +19,7 @@ body {
   /*^This should be removed later^*/
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 3.5fr;
+  grid-template-columns: 1fr 5fr;
 }
 
 .left-menu {
@@ -44,31 +44,50 @@ body {
   grid-row: 1 / span 2;
 }
 
+.logo {
+  margin-top: 17px;
+}
+
+.logo,
+.site-links {
+  display: grid;
+  grid-template-columns: 1.5fr 4fr;
+  align-items: center;
+}
+
+.site-links {
+  row-gap: 15px;
+}
+
 h1 {
   color: white;
   display: inline;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: normal;
+  margin: 0;
 }
 
-.logo > svg {
+.logo svg,
+.site-links svg {
+  align-self: center;
+  justify-self: center;
   fill: white;
-  height: 3rem;
 }
 
-.site-links {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  margin-left: 10%;
+.logo svg {
+  height: 2.5rem;
 }
 
 .site-links svg {
-  fill: white;
-  height: 1rem;
+  height: 1.2rem;
 }
 
 .site-links a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+}
+
+.site-links {
+  margin-top: 50px;
 }
