@@ -21,8 +21,6 @@ p {
 }
 
 body {
-  min-height: 100vh;
-  /*^This should be removed later^*/
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -42,15 +40,14 @@ body {
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
   padding: var(--card-gap-and-padding);
 }
 
 .projects {
-  background-color: grey;
-  /*^This should be removed later^*/
   grid-row: 1 / span 2;
   padding-right: var(--card-gap-and-padding);
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 .logo {
@@ -118,13 +115,19 @@ body {
 .projects .card {
   display: flex;
   flex-direction: column;
-  min-height: 175px;
   border-left: solid rgb(255, 196, 0) 10px;
+  min-height: 200px;
 }
 
 .card h3, 
 .card h4{
   margin: 0px;
+}
+
+.announcements,
+.trending {
+  display: grid;
+  grid-template-rows: min-content 1fr;
 }
 
 .projects p,
@@ -146,6 +149,7 @@ body {
 .announcements .card {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  row-gap: 15px;
 }
 
 .announcements > .card > div:not(:last-child) {
@@ -153,10 +157,27 @@ body {
   padding-bottom: 15px;
 }
 
-.announcements > .card > div:not(:first-child) {
-  padding-top: 15px;
-}
-
 .announcements p {
   font-size: 0.8rem;
+}
+
+.trending-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 20px;
+}
+
+.user-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.trending .title{
+  color: grey;
+}
+
+img {
+  border-radius: 50%;
+  height: 50px;
+  width: auto;
 }
