@@ -51,7 +51,7 @@ body {
 }
 
 .logo {
-  margin-top: 17px;
+  margin-top: 25px;
 }
 
 .logo,
@@ -170,6 +170,8 @@ body {
 .user-container {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  column-gap: 10px;
+  align-items: center;
 }
 
 .trending .title{
@@ -178,6 +180,84 @@ body {
 
 img {
   border-radius: 50%;
+}
+
+.dashboard img,
+.user-profile img {
   height: 50px;
   width: auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 100px;
+  row-gap: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--box-shadow-dimensions);
+  padding: 20px 100px 20px 50px;
+  font-weight: bold;
+}
+
+.header svg {
+  height: 1.6rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 60px;
+  padding-right: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.search-input {
+  flex-grow: 1;
+  background-color: rgb(192, 192, 192);
+  border: 0;
+  border-radius: 20px;
+  height: 2rem;
+}
+
+button.search{
+  background-color: transparent;
+  border: none;
+}
+
+.user-welcome {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.salutation {
+  font-size: 0.7rem;
+}
+
+.user {
+  font-size: 1.5rem;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-buttons button {
+  background-color: var(--blue);
+  border: 0;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 35px;
+  font-size: 1rem;
+  cursor: pointer;
 }
